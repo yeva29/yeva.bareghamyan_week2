@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //FIRST
+        // function perfectNumber(num){
+        //     if(num <= 1)
+        //         return false;
+        //     let sum = 1;
+        //     let i = 1;
+        //     while (++i <= num/2) 
+        //     {
+        //         if(num % i === 0)
+        //             sum += i;
+
+        //     }    
+        //     return num === sum;
+        // }
+        // console.log(perfectNumber(12));
+
+
+
+        //SECOND
+        function foo(num) {
+            if(typeof num !== 'number')
+            {
+                alert("number required!!!")
+                return null;
+            }
+            let str = num.toString();
+            let res = str[0];
+            let i = 0;
+            while (++i < str.length) 
+            {
+                let cur = parseInt(str[i]);
+                let prev = parseInt(str[i - 1]);
+                if(cur % 2 === 0 && prev % 2 === 0)
+                    res += '-' + cur;
+                else
+                    res += cur;
+
+            }
+            return res;
+        }
+
+        console.log(foo(025468));
+    </script>
+</body>
+</html>
